@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brasília - E-commerce</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Barras de Aviso -->
+    <div class="top-bar-dark">
+        CUPOM DE 10% DE DESCONTO USANDO #DESCONTO10
+    </div>
+    <div class="top-bar-accent">
+        FRETE GRÁTIS ACIMA DE R$450 &nbsp;&nbsp;|&nbsp;&nbsp; FRETE GRÁTIS ACIMA DE R$450
+    </div>
+
+    <!-- Cabeçalho Principal -->
+    <header>
+        <div class="header-main">
+            <a href="#" class="logo">BRASÍLIA</a>
+            
+            <div class="search-bar">
+                <input type="text" placeholder="O que você está buscando?">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+
+            <div class="header-actions">
+                <div class="action-item">
+                    <i class="far fa-user"></i>
+                    <div>
+                        <strong>Login</strong> /<br>
+                        <span style="font-size: 12px;">Cadastre-se</span>
+                    </div>
+                </div>
+                <div class="action-item">
+                    <i class="fas fa-shopping-bag"></i>
+                    <div>
+                        <strong>Carrinho (0)</strong><br>
+                        <span style="font-size: 12px;">R$0,00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="nav-bar">
+            <div class="nav-left">
+                <a href="#">Categorias <i class="fas fa-chevron-down" style="font-size:10px;"></i></a>
+                <a href="#">O Novo</a>
+                <a href="#">Liquidação</a>
+                <a href="#" class="highlight-link">Ofertas</a>
+            </div>
+            <div class="nav-right">
+                <a href="#">Meios de pagamento</a>
+                <a href="#">Como comprar</a>
+                <a href="#">Perguntas frequentes</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Banner Principal -->
+    <section class="hero">
+        <h1>SALE 50% OFF</h1>
+        <p>Enquanto durar o estoque</p>
+        <button class="btn-primary">Ver ofertas</button>
+    </section>
+
+    <!-- Seção de Produtos -->
+    <h2 class="section-title">Destaques</h2>
+    <section class="product-grid">
+        <!-- Produto 1 -->
+        <div class="product-card">
+            <div class="product-image">
+                <div class="tag-free-shipping"><i class="fas fa-truck"></i> GRÁTIS</div>
+                <img src="./img/modelo 1.jpeg" alt="Camisa Jeans">
+            </div>
+            <div class="product-info">
+                <span class="tag-free-shipping" style="position:static; display:inline-block; background:#63a19b; color:white; padding:3px 8px; font-size:10px; margin-bottom:10px;">20% COMPRANDO 2 OU MAIS</span>
+                <h3>Camisa jeans</h3>
+                <div class="price-old">R$104,00</div>
+                <div>
+                    <span class="price-current">R$90,00</span>
+                    <span class="discount-tag">13% OFF</span>
+                </div>
+                <button class="btn-primary">Comprar</button>
+            </div>
+        </div>
+
+        <!-- Produto 2 -->
+        <div class="product-card">
+            <div class="product-image">
+                <div class="tag-free-shipping"><i class="fas fa-truck"></i> GRÁTIS</div>
+                <img src="https://images.unsplash.com/photo-1503342394128-c104d54dba01?auto=format&fit=crop&q=80&w=400" alt="Blusinha Cropped">
+            </div>
+            <div class="product-info">
+                <h3>Blusinha Cropped</h3>
+                <div class="price-old">R$30,00</div>
+                <div>
+                    <span class="price-current">R$25,00</span>
+                    <span class="discount-tag">17% OFF</span>
+                </div>
+                <button class="btn-primary">Comprar</button>
+            </div>
+        </div>
+
+        <!-- Produto 3 -->
+        <div class="product-card">
+            <div class="product-image">
+                <div class="tag-free-shipping"><i class="fas fa-truck"></i> GRÁTIS</div>
+                <img src="https://images.unsplash.com/photo-1584273143981-41c073dfe8f8?auto=format&fit=crop&q=80&w=400" alt="Calça Wide Leg">
+            </div>
+            <div class="product-info">
+                <h3>Calça Wide Leg</h3>
+                <div class="price-old">R$67,00</div>
+                <div>
+                    <span class="price-current">R$60,00</span>
+                    <span class="discount-tag">10% OFF</span>
+                </div>
+                <button class="btn-primary">Comprar</button>
+            </div>
+        </div>
+        
+        <!-- Produto 4 -->
+        <div class="product-card">
+            <div class="product-image">
+                <div class="tag-free-shipping"><i class="fas fa-truck"></i> GRÁTIS</div>
+                <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&q=80&w=400" alt="Vestido Longo">
+            </div>
+            <div class="product-info">
+                <h3>Vestido Longo</h3>
+                <div class="price-old">R$164,00</div>
+                <div>
+                    <span class="price-current">R$140,00</span>
+                    <span class="discount-tag">15% OFF</span>
+                </div>
+                <button class="btn-primary">Comprar</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefícios -->
+    <section class="info-section">
+        <div class="info-item">
+            <i class="far fa-credit-card"></i>
+            <h4>Parcele em 3x sem juros</h4>
+            <p>Com todos os cartões de crédito</p>
+        </div>
+        <div class="info-item">
+            <i class="fas fa-truck"></i>
+            <h4>Envio gratuito</h4>
+            <p>Em compras superiores a R$500</p>
+        </div>
+        <a href="https://api.whatsapp.com/send?phone=5581998624510&text=Oi%2C%20tudo%20bem%3F%20Gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es%20sobre%20as%20%C3%B3timas%20pe%C3%A7as%20da%20Belutti%20!">
+            <div class="info-item">
+                <i class="fab fa-whatsapp"></i>
+                <h4>Ajuda por WhatsApp</h4>
+                <p>Entre em contato com a gente!</p>
+            </div>
+        </a>
+    </section>
+
+<!-- Secção de Banners de Categoria (Antes do Footer) -->
+    <section class="category-banners">
+        <div class="banner-item" style="background-image: url('https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&q=80&w=800');">
+            <div class="banner-content">
+                <h2>Camisetas</h2>
+                <a href="#" class="btn-white">Ver novidades</a>
+            </div>
+        </div>
+        
+        <div class="banner-item" style="background-image: url('https://images.unsplash.com/photo-1549281899-f75600a24107?auto=format&fit=crop&q=80&w=800');">
+            <div class="banner-content">
+                <h2>Moletons</h2>
+                <a href="#" class="btn-white">Ver coleção</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h2>BRASÍLIA</h2>
+                <p>Nossa marca tem uma tradição que se transmite há 3 gerações. Isso nos permite garantir e oferecer a mais alta qualidade em nossos produtos.</p>
+                <div class="social-icons">
+                <a href="https://www.instagram.com/usebelutti/" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+            </div>
+
+            <div class="footer-links">
+                <h3>Categorias</h3>
+                <ul>
+                    <li><a href="#">O novo</a></li>
+                    <li><a href="#">Liquidação</a></li>
+                    <li><a href="#">Ofertas</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h3>Informação</h3>
+                <ul>
+                    <li><a href="#">Meios de pagamento</a></li>
+                    <li><a href="#">Como comprar</a></li>
+                    <li><a href="#">Perguntas frequentes</a></li>
+                </ul>
+            </div>
+
+            <div class="newsletter">
+                <h3>Newsletter</h3>
+                <p>Faça parte da nossa comunidade e receba as melhores ofertas!</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="E-mail">
+                    <button>Enviar</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div>
+                Meios de envio <i class="fas fa-shipping-fast" style="margin-left: 10px; font-size:18px;"></i>
+            </div>
+            <div>
+                criado com Nuvemshop | Copyright Brasilia Theme - 2026. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
