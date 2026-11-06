@@ -1,0 +1,216 @@
+ /* Mesmas variáveis da paleta neutra */
+        :root {
+            --primary-color: #bfa184; 
+            --dark-bg: #1a1a1a; 
+            --main-bg: #f4f1eb; 
+            --alt-bg: #e8e2d5; 
+            --text-main: #2b2b2b; 
+            --text-light: #666666; 
+            --border-color: #dcd7ce; 
+            --white: #ffffff; 
+            --font-main: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            --tag-discount: #4caf50; /* Cor verde para destaque de desconto como na imagem */
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: var(--font-main); color: var(--text-main); background-color: var(--main-bg); }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+
+        /* HEADER SIMPLIFICADO (Mesmo do index) */
+        header { padding: 20px 40px; border-bottom: 1px solid var(--border-color); background-color: var(--main-bg); }
+        .header-main { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 28px; font-weight: 400; letter-spacing: 2px; }
+        
+        /* LAYOUT DA PÁGINA DE PRODUTOS (PLP) */
+        .container {
+            display: flex;
+            padding: 40px;
+            gap: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* BARRA LATERAL (Filtros) */
+        .sidebar {
+            width: 250px;
+            flex-shrink: 0;
+        }
+
+        .filter-group {
+            margin-bottom: 30px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 20px;
+        }
+
+        .filter-group h3 {
+            font-size: 16px;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+
+        .filter-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: var(--text-light);
+            cursor: pointer;
+        }
+
+        .filter-item input {
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        /* Grid de Tamanhos (Estilo Imagem 3) */
+        .size-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .size-box {
+            border: 1px solid var(--border-color);
+            padding: 8px 0;
+            text-align: center;
+            font-size: 13px;
+            cursor: pointer;
+            background: var(--white);
+        }
+        .size-box:hover { border-color: var(--text-main); }
+
+        /* ÁREA PRINCIPAL DE PRODUTOS */
+        .main-content {
+            flex-grow: 1;
+        }
+
+        .plp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        .plp-header select {
+            padding: 8px 15px;
+            border: 1px solid var(--border-color);
+            background: transparent;
+            font-family: inherit;
+            cursor: pointer;
+        }
+
+        /* GRID DE PRODUTOS */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .product-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--white);
+            padding-bottom: 15px;
+            border: 1px solid transparent;
+            transition: border 0.3s;
+        }
+        
+        .product-card:hover {
+            border: 1px solid var(--border-color);
+        }
+
+        .product-image {
+            position: relative;
+            width: 100%;
+            height: 350px;
+            background-color: var(--alt-bg);
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        /* Tag de desconto verde na base da imagem (Estilo Imagem 2) */
+        .discount-bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--tag-discount);
+            color: var(--white);
+            text-align: center;
+            padding: 5px 0;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .product-info {
+            padding: 0 15px;
+        }
+
+        .product-info h3 {
+            font-size: 14px;
+            font-weight: 400;
+            margin-bottom: 5px;
+            color: var(--text-main);
+        }
+
+        .stars {
+            color: #f39c12;
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
+
+        .price-old {
+            text-decoration: line-through;
+            color: var(--text-light);
+            font-size: 12px;
+        }
+
+        .price-current {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .installment {
+            font-size: 12px;
+            color: var(--text-light);
+            margin-top: 3px;
+        }
+        
+        /* Botão de curtir (coração) */
+        .btn-wishlist {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: var(--white);
+            border: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Responsividade */
+        @media (max-width: 900px) {
+            .container { flex-direction: column; }
+            .sidebar { width: 100%; }
+            .product-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 600px) {
+            .product-grid { grid-template-columns: 1fr; }
+        }

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camisetas - Brasília</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="camisas-style.css">
+</head>
+<body>
+
+    <!-- Header simplificado para navegação -->
+    <header>
+        <div class="header-main">
+            <a href="index.html" class="logo">BRASÍLIA</a>
+            <div style="font-size: 14px;"><a href="index.html"><i class="fas fa-arrow-left"></i> Voltar para Home</a></div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- BARRA LATERAL ESQUERDA (Filtros baseados na Imagem 2 e 3) -->
+        <aside class="sidebar">
+            <div class="filter-group">
+                <h3>Marca <i class="fas fa-minus"></i></h3>
+                <label class="filter-item"><input type="checkbox"> TRIP Brasil</label>
+                <label class="filter-item"><input type="checkbox"> Acostamento</label>
+                <label class="filter-item"><input type="checkbox"> Activitta</label>
+                <label class="filter-item"><input type="checkbox"> Adidas</label>
+            </div>
+
+            <div class="filter-group">
+                <h3>Tamanho <i class="fas fa-minus"></i></h3>
+                <div class="size-grid">
+                    <div class="size-box">P</div>
+                    <div class="size-box">M</div>
+                    <div class="size-box">G</div>
+                    <div class="size-box">GG</div>
+                    <div class="size-box">XG</div>
+                    <div class="size-box">36</div>
+                    <div class="size-box">38</div>
+                    <div class="size-box">40</div>
+                    <div class="size-box">42</div>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <h3>Gênero <i class="fas fa-minus"></i></h3>
+                <label class="filter-item"><input type="checkbox"> Feminino</label>
+                <label class="filter-item"><input type="checkbox" checked> Masculino</label>
+                <label class="filter-item"><input type="checkbox"> Menina</label>
+            </div>
+        </aside>
+
+        <!-- ÁREA CENTRAL (Lista de Produtos baseada na Imagem 2) -->
+        <main class="main-content">
+            
+            <div class="plp-header">
+                <span>Exibindo: 1 - 42 de 6.167 resultados</span>
+                <div>
+                    <label>Ordenar por: </label>
+                    <select>
+                        <option>Mais Populares</option>
+                        <option>Menor preço</option>
+                        <option>Maior preço</option>
+                        <option>Novidades</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="product-grid">
+                <!-- Produto 1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <button class="btn-wishlist"><i class="far fa-heart"></i></button>
+                        <!-- Imagem de exemplo -->
+                        <img src="https://images.unsplash.com/photo-1598033129183-c4f50c736f10?auto=format&fit=crop&q=80&w=400" alt="Camisa">
+                        <div class="discount-bar">-33% OFF</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Camisa Social Slim Manga Longa Elegante</h3>
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                        <div class="price-old">R$ 299,99</div>
+                        <div class="price-current">R$ 179,99</div>
+                        <div class="installment">ou 2x de R$ 100,00 sem juros</div>
+                    </div>
+                </div>
+
+                <!-- Produto 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <button class="btn-wishlist"><i class="far fa-heart"></i></button>
+                        <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&q=80&w=400" alt="Camisa 2">
+                        <div class="discount-bar">-25% OFF</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Camisa Masculina Social Tencel Azul</h3>
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <div class="price-old">R$ 120,00</div>
+                        <div class="price-current">R$ 89,90</div>
+                        <div class="installment">no Pix</div>
+                    </div>
+                </div>
+
+                <!-- Produto 3 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <button class="btn-wishlist"><i class="far fa-heart"></i></button>
+                        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&q=80&w=400" alt="Camisa 3">
+                        <div class="discount-bar">-50% OFF</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Camiseta Básica Algodão Premium</h3>
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                        <div class="price-old">R$ 99,00</div>
+                        <div class="price-current">R$ 49,50</div>
+                        <div class="installment">ou 1x de R$ 49,50</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
