@@ -9,57 +9,64 @@
 </head>
 <body>
 
-    <!-- Cabeçalho Principal -->
+    <!-- ==========================================
+         CABEÇALHO PRINCIPAL
+    =========================================== -->
     <header>
-    <div class="header-main">
-        <!-- Logotipo -->
-        <a href="index.html" class="logo">BELUTTI</a>
+        <div class="header-main">
+            <!-- Logotipo -->
+            <a href="index.html" class="logo">BELUTTI</a>
 
-        <!-- Menu de Navegação (Problema resolvido) -->
-        <nav class="nav-menu">
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="camisetas.html">Camisetas</a></li>
-                <li><a href="#">Moletons</a></li>
-                <li><a href="#">Calças</a></li>
-                <li><a href="#">Acessórios</a></li>
-            </ul>
-        </nav>
-        
-        <!-- Barra de Busca -->
-        <div class="search-bar">
-            <input type="text" placeholder="O que você está buscando?">
-            <button><i class="fas fa-search"></i></button>
-        </div>
+            <!-- Menu de Navegação -->
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="camisetas.html">Camisetas</a></li>
+                    <li><a href="#">Moletons</a></li>
+                    <li><a href="#">Calças</a></li>
+                    <li><a href="#">Acessórios</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Barra de Busca -->
+            <div class="search-bar">
+                <input type="text" placeholder="O que você está buscando?">
+                <button><i class="fas fa-search"></i></button>
+            </div>
 
-        <!-- Ações do Usuário (Login e Carrinho) -->
-        <div class="header-actions">
-            <div class="action-item">
-                <i class="far fa-user"></i>
-                <div>
-                    <strong>Login</strong> /<br>
-                    <span style="font-size: 12px;">Cadastre-se</span>
+            <!-- Ações do Usuário (Login e Carrinho) -->
+            <div class="header-actions">
+                <div class="action-item">
+                    <i class="far fa-user"></i>
+                    <div>
+                        <strong>Login</strong> /<br>
+                        <span style="font-size: 12px;">Cadastre-se</span>
+                    </div>
+                </div>
+                <div class="action-item">
+                    <i class="fas fa-shopping-bag"></i>
+                    <div>
+                        <strong>Carrinho (0)</strong><br>
+                        <span style="font-size: 12px;">R$0,00</span>
+                    </div>
                 </div>
             </div>
-            <div class="action-item">
-                <i class="fas fa-shopping-bag"></i>
-                <div>
-                    <strong>Carrinho (0)</strong><br>
-                    <span style="font-size: 12px;">R$0,00</span>
-                </div>
-            </div>
         </div>
-    </div>
-</header>
+    </header>
 
-   <!-- Banner Principal -->
+    <!-- ==========================================
+         BANNER PRINCIPAL (HERO)
+    =========================================== -->
     <section class="hero-banner">
-            <img src="./img/banner_belutti_fullscreen.png" alt="Belutti - Vista seu estilo" class="hero-img">
+        <img src="./img/banner_belutti_fullscreen.png" alt="Belutti - Vista seu estilo" class="hero-img">
     </section>
 
-    <!-- Seção de Produtos -->
+    <!-- ==========================================
+         SECÇÃO DE PRODUTOS (DESTAQUES)
+    =========================================== -->
     <h2 class="section-title">Destaques</h2>
     <section class="product-grid">
+        
         <!-- Produto 1 -->
         <div class="product-card">
             <div class="product-image">
@@ -117,7 +124,9 @@
         </div>
     </section>
 
-    <!-- Benefícios -->
+    <!-- ==========================================
+         BENEFÍCIOS (INFORMAÇÕES)
+    =========================================== -->
     <section class="info-section">
         <div class="info-item">
             <i class="far fa-credit-card"></i>
@@ -125,11 +134,11 @@
             <p>Com todos os cartões de crédito</p>
         </div>
         <a href="https://maps.app.goo.gl/GwXhH3W3nkAN4NoE8" target="_blank" rel="noopener noreferrer">
-        <div class="info-item">
-            <i class="fas fa-map-marker-alt"></i>
-            <h4>Visite nossa loja fisíca</h4>
-            <p>Será um prazer receber você!</p>
-        </div>
+            <div class="info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <h4>Visite nossa loja fisíca</h4>
+                <p>Será um prazer receber você!</p>
+            </div>
         </a>
         <a href="https://api.whatsapp.com/send?phone=5581998624510&text=Oi%2C%20tudo%20bem%3F%20Gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es%20sobre%20as%20%C3%B3timas%20pe%C3%A7as%20da%20Belutti%20!" target="_blank" rel="noopener noreferrer">
             <div class="info-item">
@@ -147,16 +156,18 @@
         </a>
     </section>
 
-<!-- Secção de Banners de Categoria (Antes do Footer) -->
+    <!-- ==========================================
+         BANNERS DE CATEGORIA
+    =========================================== -->
     <section class="category-banners">
-        <div class="banner-item" style="background-image: url(img/banner\ camisa.jpeg);">
+        <div class="banner-item" style="background-image: url('img/banner camisa.jpeg');">
             <div class="banner-content">
                 <h2>CAMISETAS</h2>
                 <a href="camisetas.html" class="btn-white">Ver novidades</a>
             </div>
         </div>
         
-        <div class="banner-item" style="background-image: url(img/banner\ casaco.jpeg);">
+        <div class="banner-item" style="background-image: url('img/banner casaco.jpeg');">
             <div class="banner-content">
                 <h2>MOLETONS</h2>
                 <a href="#" class="btn-white">Ver coleção</a>
@@ -164,27 +175,33 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-grid">
-            <div class="footer-brand">
-                <h2>BELUTTI</h2>
-                <p>A Belutti surgiu com o propósito de levar moda masculina com estilo, atitude e personalidade.
-                <br> Acreditamos que se vestir bem vai muito além de acompanhar tendências: é uma forma de expressar quem você é. 
-                <br> Por isso, reunimos peças que combinam conforto, versatilidade e autenticidade, do casual ao sofisticado, para acompanhar você em diferentes momentos. 
-                <br> Mais do que vestir, queremos fazer parte da sua identidade.
-
-                </p>
-                <p><strong>BELUTTI — Vista seu estilo.</strong></p>
-                <div class="social-icons">
-                <a href="https://www.instagram.com/usebelutti/" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-instagram"></i>
-                </a>
-            </div>
-            </div>
-
+    <!-- ==========================================
+         RODAPÉ (FOOTER)
+    =========================================== -->
+    <footer class="site-footer">
+        <div class="footer-content">
             
-            <div class="newsletter">
+            <!-- Coluna 1: A Marca -->
+            <div class="footer-col brand-col">
+                <h2>BELUTTI</h2>
+                <p>A Belutti surgiu com o propósito de levar moda masculina com estilo, atitude e personalidade. Reunimos peças que combinam conforto e versatilidade para acompanhar você em diferentes momentos.</p>
+                <p><strong>BELUTTI — Vista seu estilo.</strong></p>
+            </div>
+
+            <!-- Coluna 2: Links Institucionais -->
+            <div class="footer-col links-col">
+                <h3>Institucional</h3>
+                <ul>
+                    <li><a href="#" class="open-sidebar" data-target="quem-somos">Quem Somos</a></li>
+                    <li><a href="#" class="open-sidebar" data-target="trocas">Políticas de Troca e Devolução</a></li>
+                    <li><a href="#" class="open-sidebar" data-target="prazos">Prazos de Entrega</a></li>
+                    <li><a href="#">Rastrear Pedido</a></li>
+                    <li><a href="#" class="open-sidebar" data-target="faq">Perguntas Frequentes (FAQ)</a></li>
+                </ul>
+            </div>
+
+            <!-- Coluna 3: Fale Conosco e Newsletter -->
+            <div class="footer-col contact-col">
                 <h3>Fale Conosco</h3>
                 <p>Tem alguma dúvida, sugestão ou precisa de ajuda? Estamos aqui para ajudar!</p>
                 <div class="newsletter-form">
@@ -192,14 +209,49 @@
                     <button>Enviar</button>
                 </div>
             </div>
-        </div>
-        
-        <div class="footer-bottom">
-            <div>
-                criado com Nuvemshop | Copyright Brasilia Theme - 2026. Todos os direitos reservados.
+
+            <!-- Coluna 4: Segurança e Pagamento -->
+            <div class="footer-col security-col">
+                <h3>Formas de Pagamento</h3>
+                <div class="payment-icons">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <i class="fab fa-pix"></i>
+                </div>
+                
+                <h3 style="margin-top: 25px;">Segurança</h3>
+                <div class="security-badge">
+                    <i class="fas fa-lock"></i> <span>Site Seguro - SSL</span>
+                </div>
             </div>
+            
+        </div>
+
+        <!-- Linha final de Copyright -->
+        <div class="footer-bottom">
+            <p>criado com Nuvemshop | Copyright Belutti - 2026. Todos os direitos reservados.</p>
         </div>
     </footer>
 
+    <!-- ==========================================
+         PAINEL LATERAL (OFFCANVAS)
+    =========================================== -->
+    <!-- Fundo escuro que cobre o site -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- O Painel que desliza da direita -->
+    <div class="sidebar-panel" id="sidebarPanel">
+        <div class="sidebar-header">
+            <h3 id="sidebarTitle">Título</h3>
+            <button class="sidebar-close" id="sidebarClose">&times;</button>
+        </div>
+        <div class="sidebar-content" id="sidebarContent">
+            <!-- O texto aparecerá aqui dentro via JavaScript -->
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
 </body>
 </html>

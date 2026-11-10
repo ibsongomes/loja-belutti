@@ -1,37 +1,41 @@
+/* =========================================
+   VARIÁVEIS GLOBAIS
+========================================= */
 :root {
-        --primary-color: #c4d600; /* Verde-limão das tags e botões */
-        --dark-bg: #3c3b38; /* Cinza escuro do topo e rodapé */
-        --light-green-bg: #f0f4db; /* Fundo da seção de benefícios */
-        --text-main: #333333;
-        --text-light: #777777;
-        --border-color: #e5e5e5;
-        --white: #ffffff;
-        --font-main: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    }
+    --primary-color: #c4d600;
+    --text-main: #333333;
+    --text-light: #777777;
+    --border-color: #e5e5e5;
+    --white: #ffffff;
+    --alt-bg: #f5f5f5; /* Adicionado para o fundo das fotos de produtos */
+    --font-main: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+/* =========================================
+   RESETS E CONFIGURAÇÕES GLOBAIS
+========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        body {
-            font-family: var(--font-main);
-            color: var(--text-main);
-            background-color: var(--white);
-        }
+body {
+    font-family: var(--font-main);
+    color: var(--text-main);
+    background-color: var(--white);
+}
 
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
-        ul {
-            list-style: none;
-        }
+ul {
+    list-style: none;
+}
 
-
-        /* =========================================
+/* =========================================
    CABEÇALHO (HEADER) FIXO
 ========================================= */
 header {
@@ -39,7 +43,7 @@ header {
     top: 0; 
     z-index: 1000; 
     background-color: burlywood;
-    padding: 20px 40px; /* Voltou para o espaçamento original do seu projeto */
+    padding: 20px 40px;
     border-bottom: 1px solid var(--border-color);
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); 
 }
@@ -48,25 +52,22 @@ header {
     display: flex;
     justify-content: space-between; 
     align-items: center;
-    width: 100%; /* Força a ocupar 100% do espaço disponível */
+    width: 100%;
     margin-bottom: 20px;
 }
 
 .logo {
     font-size: 35px;
-    font-weight: bold; /* Corrigido o erro de sintaxe antigo */
+    font-weight: bold;
     letter-spacing: 2px;
     color: var(--text-main);
     text-decoration: none;
 }
 
-/* =========================================
-   MENU DE NAVEGAÇÃO
-========================================= */
+/* Menu de Navegação */
 .nav-menu ul {
     display: flex;
-    gap: 25px; /* Espaço entre os links */
-    list-style: none;
+    gap: 25px;
     margin: 0;
     padding: 0;
 }
@@ -76,21 +77,18 @@ header {
     font-weight: 600;
     color: var(--text-main);
     text-transform: uppercase;
-    text-decoration: none;
     transition: color 0.2s ease;
 }
 
 .nav-menu a:hover {
-    color: #ffffff; /* Fica branco ao passar o mouse */
+    color: #ffffff;
 }
 
-/* =========================================
-   BARRA DE BUSCA (Ajustada)
-========================================= */
+/* Barra de Busca */
 .search-bar {
     display: flex;
-    width: 500px; /* Mantém a largura ajustada para o menu caber */
-    height: 50px; /* Restaura a altura original de 50px */
+    width: 500px;
+    height: 50px;
     border: 1px solid var(--border-color);
     border-radius: 4px;
     overflow: hidden;
@@ -119,9 +117,7 @@ header {
     background-color: #e0e0e0;
 }
 
-/* =========================================
-   ÍCONES (LOGIN / CARRINHO)
-========================================= */
+/* Ícones (Login / Carrinho) */
 .header-actions {
     display: flex;
     gap: 25px;
@@ -141,9 +137,10 @@ header {
     font-size: 20px;
 }
 
-        /* Hero Banner */
-        /* Contêiner principal do Banner */
-        .hero-banner {
+/* =========================================
+   BANNER PRINCIPAL (HERO)
+========================================= */
+.hero-banner {
     width: 100%;
     height: calc(100vh - 110px);
     overflow: hidden;
@@ -157,323 +154,592 @@ header {
     object-position: center;
 }
 
-
-/* Ajuste para celulares (Responsividade) */
-@media (max-width: 768px) {
-    .hero-model {
-        width: 60%; /* Em celulares, 30% fica minúsculo, então aumentamos a proporção */
-        right: -10%; /* Joga a imagem um pouco para fora da tela na direita para dar estilo */
-    }
+/* =========================================
+   BOTÕES GLOBAIS
+========================================= */
+.btn-primary {
+    display: inline-block;
+    background-color: rgb(101, 54, 7);
+    color: #ffffff;
+    padding: 12px 30px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid #1a1a1a;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    outline: none;
 }
-        .btn-primary {
-            background-color: rgb(101, 54, 7);
-            color: white;
-            padding: 12px 35px;
-            border: none;
-            border-radius: 4px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: opacity 0.3s;
-        }
 
-        .btn-primary:hover {
-            opacity: 0.9;
-        }
+.btn-primary:hover {
+    background-color: #c2a88d;
+    border-color: #c2a88d;
+    color: #1a1a1a;
+}
 
-        /* Produtos - Destaques */
-        .section-title {
-            font-size: 28px;
-            font-weight: 400;
-            padding: 50px 40px 20px;
-                
-            /* Transforma o título num alinhador flexível */
-            display: flex;
-            align-items: center;
-        }
+.btn-white {
+    display: inline-block;
+    background-color: rgb(101, 54, 7);
+    color: white;
+    padding: 14px 28px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 30px;
+}
 
-/* Cria a linha que estica até o final da tela */
-        .section-title::after {
-            content: '';
-            flex: 1; /* Faz a linha ocupar todo o espaço vazio restante à direita */
-            height: 2px; /* Espessura da linha */
-            background-color: rgba(0, 0, 0, 0.1); /* Cor da linha (preto bem claro/discreto) */
-            margin-left: 20px; /* Espaço entre a palavra "Destaques" e o início da linha */
-        }
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-            padding: 0 40px 50px;
-        }
+.btn-white:hover {
+    opacity: 0.9;
+}
 
-        .product-card {
-            display: flex;
-            flex-direction: column;
-        }
+/* =========================================
+   PRODUTOS (DESTAQUES)
+========================================= */
+.section-title {
+    font-size: 28px;
+    font-weight: 400;
+    padding: 50px 40px 20px;
+    display: flex;
+    align-items: center;
+}
 
-        .product-image {
+.section-title::after {
+    content: '';
+    flex: 1;
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin-left: 20px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 0 40px 50px;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-image {
     position: relative;
     width: 100%;
-    height: 450px; /* Define uma altura fixa igual para todas as imagens (ajuste o valor se achar necessário) */
+    height: 450px;
     background-color: var(--alt-bg);
     margin-bottom: 15px;
-    overflow: hidden; /* Corta qualquer excesso de imagem que sair da caixa */
+    overflow: hidden;
 }
 
 .product-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Preenche a caixa perfeitamente sem distorcer a foto */
-    object-position: top; /* Foca na parte superior da imagem (evita cortar a cabeça dos modelos) */
+    object-fit: cover;
+    object-position: top;
 }
 
-        .tag-free-shipping {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            background: var(--white);
-            padding: 4px 8px;
-            font-size: 11px;
-            font-weight: 600;
-            border-radius: 2px;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
+.product-info h3 {
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
 
-        .product-info h3 {
-            font-size: 15px;
-            font-weight: 400;
-            margin-bottom: 8px;
-        }
+.price-current {
+    font-size: 18px;
+    font-weight: 600;
+    margin-right: 10px;
+}
 
-        .price-old {
-            text-decoration: line-through;
-            color: var(--text-light);
-            font-size: 14px;
-        }
+.product-card .btn-primary {
+    margin-top: 15px;
+    width: fit-content;
+    padding: 8px 25px;
+    font-size: 14px;
+}
 
-        .price-current {
-            font-size: 18px;
-            font-weight: 600;
-            margin-right: 10px;
-        }
+/* =========================================
+   INFORMAÇÕES (BENEFÍCIOS)
+========================================= */
+.info-section {
+    background-color: burlywood;
+    display: flex;
+    justify-content: space-around;
+    padding: 60px 40px;
+    text-align: center;
+}
 
-        .discount-tag {
-            color: #2e9f8f;
-            font-size: 13px;
-            font-weight: 500;
-        }
+.info-item i {
+    font-size: 30px;
+    margin-bottom: 15px;
+    color: var(--text-main);
+}
 
-        .product-card .btn-primary {
-            margin-top: 15px;
-            width: fit-content;
-            padding: 8px 25px;
-            font-size: 14px;
-        }
+.info-item h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
 
-        /* Info Section (Benefícios) */
-        .info-section {
-            background-color: burlywood;
-            display: flex;
-            justify-content: space-around;
-            padding: 60px 40px;
-            text-align: center;
-        }
+.info-item p {
+    font-size: 14px;
+    color: var(--text-light);
+}
 
-        .info-item i {
-            font-size: 30px;
-            margin-bottom: 15px;
-            color: var(--text-main);
-        }
+/* =========================================
+   BANNERS DE CATEGORIA
+========================================= */
+.category-banners {
+    display: flex;
+    gap: 20px;
+    padding: 40px;
+    margin-bottom: 40px;
+}
 
-        .info-item h4 {
-            font-size: 18px;
-            margin-bottom: 5px;
-        }
+.banner-item {
+    flex: 1;
+    position: relative;
+    height: 550px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    overflow: hidden;
+}
 
-        .info-item p {
-            font-size: 14px;
-            color: var(--text-light);
-        }
+.banner-item::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.15);
+    z-index: 1;
+}
 
-        /* Footer */
-        footer {
-            background-color: var(--dark-bg);
-            color: var(--white);
-            padding: 60px 40px 30px;
-        }
+.banner-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
 
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 1.7fr 1.5fr;
-            gap: 40px;
-            margin-bottom: 60px;
-        }
+.banner-content h2 {
+    color: white;
+    font-size: 68px;
+    font-weight: 900;
+    font-family: 'Arial Black', Impact, sans-serif;
+    margin-bottom: 25px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 4px;
+}
 
-        .footer-brand h2 {
-            font-size: 50px;
-            font-weight: 400;
-            letter-spacing: 1px;
-            margin-bottom: 20px;
-        }
+/* =========================================
+   RODAPÉ (FOOTER)
+========================================= */
+.site-footer {
+    background-color: #333333;
+    color: #e0e0e0;
+    padding: 60px 40px 20px;
+    font-family: var(--font-main);
+    border-top: 1px solid var(--border-color);
+}
 
-        .footer-brand p {
-            font-size: 14px;
-            line-height: 1.6;
-            margin-bottom: 20px;
-            color: #d1d1d1;
-        }
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
 
-        .social-icons i {
-            font-size: 18px;
-            margin-right: 15px;
-            cursor: pointer;
-        }
+.footer-col h2 {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
 
-        .footer-links h3 {
-            font-size: 16px;
-            margin-bottom: 20px;
-        }
+.footer-col h3 {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
 
-        .footer-links ul li {
-            margin-bottom: 12px;
-            font-size: 14px;
-            color: #d1d1d1;
-        }
+.footer-col p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #a3a3a3;
+}
 
-        .newsletter{
-            margin-top: 73px;
-            max-width: 400px; /* Define um limite máximo para não esticar muito em telas grandes */
-            margin-left: 150px;
-        }
+.social-icons a {
+    color: #ffffff;
+    font-size: 22px;
+    transition: color 0.3s;
+}
 
-        .newsletter h3 {
-            font-size: 16px;
-            margin-bottom: 20px;
-        }
-        
-        .newsletter p {
-            font-size: 14px;
-            color: #d1d1d1;
-            margin-bottom: 15px;
-        }
+.social-icons a:hover {
+    color: var(--primary-color);
+}
 
-        .newsletter-form {
-            display: flex;
-        }
+.links-col ul {
+    padding: 0;
+    margin: 0;
+}
 
-        .newsletter-form input {
-            background: transparent;
-            border: 1px solid #666;
-            color: var(--white);
-            padding: 10px 15px;
-            flex: 1;
-            outline: none;
-            width: 20px;
-        }
+.links-col li {
+    margin-bottom: 12px;
+}
 
-        .newsletter-form button {
-            background: transparent;
-            color: var(--white);
-            border: 1px solid #666;
-            border-left: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
+.links-col a {
+    color: #a3a3a3;
+    font-size: 14px;
+    transition: color 0.2s;
+}
 
-        .newsletter-form button:hover {
-            background: var(--white);
-            color: var(--dark-bg);
-        }
+.links-col a:hover {
+    color: #ffffff;
+}
 
-        .footer-bottom {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-top: 1px solid #4a4946;
-            padding-top: 20px;
-            font-size: 12px;
-            color: #d1d1d1;
-        }
+.newsletter-form {
+    display: flex;
+    margin-top: 15px;
+}
 
-        /* Banners de Categoria (Camisetas e Moletons) */
-        .category-banners {
-            display: flex;
-            gap: 20px; /* Espaçamento entre os dois banners */
-            padding: 40px; /* Mantém o alinhamento lateral com o resto do site */
-            margin-bottom: 40px;
-        }
+.newsletter-form input {
+    flex: 1;
+    padding: 10px 15px;
+    background-color: transparent;
+    border: 1px solid #666;
+    color: #fff;
+    outline: none;
+}
 
-        .banner-item {
-            flex: 1;
-            position: relative;
-            height: 550px;
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            overflow: hidden;
-        }
+.newsletter-form button {
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 1px solid #666;
+    border-left: none;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
 
-        /* Opcional: Um leve degradê escuro para garantir a leitura do texto caso a imagem seja clara */
-        .banner-item::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(0, 0, 0, 0.15);
-            z-index: 1;
-        }
+.newsletter-form button:hover {
+    background-color: #555;
+}
 
-        .banner-content {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-        }
+.payment-icons {
+    display: flex;
+    gap: 15px;
+    font-size: 30px;
+    color: #ffffff;
+}
 
-        .banner-content h2 {
-            color: white; /* Amarelo vibrante igual ao da imagem */
-            font-size: 68px;
-            font-weight: 900;
-            font-family: 'Arial Black', Impact, sans-serif;
-            margin-bottom: 25px;
-            letter-spacing: -2px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-            letter-spacing: 4px;
-        }
+.security-badge {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #4caf50;
+}
 
-        .btn-white {
-            display: inline-block;
-            background-color: rgb(101, 54, 7);
-            color: white;
-            padding: 14px 28px;
-            font-size: 14px;
-            font-weight: 500;
-            cursor: pointer;
-            transition: opacity 0.3s;
-            font-family: Arial, Helvetica, sans-serif;
-            border-radius: 30px;
-        }
+.footer-bottom {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 12px;
+    color: #a3a3a3;
+    text-align: center;
+}
 
-        .btn-white:hover {
-            opacity: 0.9;
-        }
+/* =========================================
+   PAINEL LATERAL (OFFCANVAS)
+========================================= */
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
 
-        /* Responsividade para ecrãs menores */
-        @media (max-width: 768px) {
-            .category-banners {
-                flex-direction: column;
-                padding: 20px;
-            }
-            .banner-item {
-                height: 400px;
-            }
-            .banner-content h2 {
-                font-size: 48px;
-            }
-        }
+.sidebar-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
 
+.sidebar-panel {
+    position: fixed;
+    top: 0;
+    right: -450px;
+    width: 100%;
+    max-width: 450px;
+    height: 100vh;
+    background-color: #ffffff;
+    z-index: 1002;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    transition: right 0.4s cubic-bezier(0.77, 0, 0.175, 1); 
+}
+
+.sidebar-panel.active {
+    right: 0;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 30px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.sidebar-header h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.sidebar-close {
+    background: none;
+    border: none;
+    font-size: 28px;
+    line-height: 1;
+    color: #1a1a1a;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.sidebar-close:hover {
+    color: #c2a88d;
+}
+
+.sidebar-content {
+    padding: 30px;
+    overflow-y: auto;
+    flex: 1;
+    color: #333333;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.sidebar-content h4 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #1a1a1a;
+}
+
+/* =========================================
+   RESPONSIVIDADE (MEDIA QUERIES)
+========================================= */
+/* =========================================
+   RESPONSIVIDADE (MEDIA QUERIES)
+========================================= */
+
+/* Tablets e Ecrãs Médios (até 1024px) */
+@media (max-width: 1024px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 produtos por linha */
+    }
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .search-bar {
+        width: 300px; /* Reduz a barra de pesquisa para caber no meio */
+    }
+}
+
+/* Telemóveis (até 768px) */
+@media (max-width: 768px) {
+    /* 1. CABEÇALHO (Reorganização completa) */
+    header {
+        padding: 15px 20px;
+    }
+    
+    .header-main {
+        flex-wrap: wrap; /* Permite que os itens saltem para a linha de baixo */
+        gap: 15px;
+        margin-bottom: 10px;
+    }
+    
+    .logo {
+        font-size: 28px;
+    }
+    
+    .header-actions {
+        gap: 15px;
+    }
+    
+    /* Esconde os textos "Login" e "Carrinho" e os valores, deixa só os ícones */
+    .action-item div {
+        display: none; 
+    }
+    
+    .search-bar {
+        order: 3; /* Joga a barra de pesquisa para a linha de baixo */
+        width: 100%; 
+        height: 45px;
+    }
+    
+    .nav-menu {
+        order: 4; /* Joga o menu para baixo da pesquisa */
+        width: 100%;
+        overflow-x: auto; /* Cria o efeito moderno de deslizar com o dedo (swipe) */
+        padding-bottom: 5px;
+    }
+    
+    .nav-menu ul {
+        justify-content: flex-start;
+        min-width: max-content; /* Impede que os links fiquem esmagados */
+        gap: 20px;
+    }
+    
+    .nav-menu a {
+        font-size: 13px;
+    }
+
+    /* 2. BANNER PRINCIPAL */
+    .hero-banner {
+        height: auto; /* Remove a altura forçada para deixar a imagem ditar o tamanho */
+        background-color: #d5bba4; /* Mantém a cor de fundo do seu design */
+    }
+    
+    .hero-img {
+        height: auto; /* A altura ajusta-se proporcionalmente */
+        object-fit: contain; /* Garante que 100% da imagem apareça sem cortes laterais */
+    }
+
+    /* 3. PRODUTOS (Padrão de 2 colunas para Moda) */
+    .section-title {
+        padding: 30px 20px 15px;
+        font-size: 22px;
+    }
+    
+    .section-title::after {
+        margin-left: 10px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 10px; /* Espaço menor entre os produtos */
+        padding: 0 20px 30px;
+    }
+
+    .product-image {
+        height: 220px; /* Altura ajustada para o tamanho do ecrã */
+    }
+
+    .product-info h3 {
+        font-size: 13px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; /* Coloca "..." se o nome for muito grande */
+    }
+
+    .price-current {
+        font-size: 16px;
+    }
+
+    .product-card .btn-primary {
+        width: 100%; /* Botão largo para ser fácil de clicar com o dedo */
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    /* 4. INFORMAÇÕES (BENEFÍCIOS) */
+    .info-section {
+        display: grid; /* Muda de flex para grid para criar a tabela */
+        grid-template-columns: repeat(2, 1fr); /* Cria exatamente 2 colunas */
+        gap: 30px 15px; /* Espaçamento vertical e horizontal */
+        padding: 30px 15px;
+    }
+
+    .info-item i {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .info-item h4 {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .info-item p {
+        font-size: 12px;
+    }
+
+    /* 5. BANNERS DE CATEGORIA */
+    .category-banners {
+        flex-direction: row; /* Força a voltarem a ficar um ao lado do outro */
+        padding: 20px 15px;
+        gap: 10px; /* Espaço pequeno entre os dois banners */
+    }
+    
+    .banner-item {
+        height: 180px; /* Altura ideal para banners quadrados/retangulares lado a lado */
+        border-radius: 8px; /* Mantém o estilo moderno */
+    }
+    
+    .banner-content h2 {
+        font-size: 18px; /* Título bem mais pequeno para caber sem quebrar a linha */
+        margin-bottom: 10px;
+        letter-spacing: 1px;
+    }
+
+    .banner-content .btn-white {
+        padding: 8px 14px;
+        font-size: 11px; /* Botão reduzido para caber na perfeição */
+    }
+    /* 6. RODAPÉ */
+    .site-footer {
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr; /* Coloca tudo numa única coluna vertical */
+        gap: 35px;
+        text-align: center; /* Centraliza os textos do rodapé no telemóvel */
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .newsletter-form input {
+        border-right: 1px solid #666;
+    }
+    
+    .newsletter-form button {
+        border: 1px solid #666;
+        width: 100%;
+    }
+
+    .payment-icons, .security-badge, .social-icons {
+        justify-content: center; /* Centraliza os ícones */
+    }
+
+    /* 7. PAINEL LATERAL (OFFCANVAS) */
+    .sidebar-panel {
+        max-width: 85%; /* Ocupa 85% da tela, deixando uma faixa escura visível para o cliente saber que pode clicar fora para fechar */
+    }
+}
