@@ -159,14 +159,14 @@ header {
 ========================================= */
 .btn-primary {
     display: inline-block;
-    background-color: rgb(101, 54, 7);
-    color: #ffffff;
+    background-color: #dabd9d;
+    color: rgb(73, 39, 5);
     padding: 12px 30px;
     font-size: 14px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
-    border: 1px solid #1a1a1a;
+    border: 2px solid #1a1a1a;
     border-radius: 4px;
     cursor: pointer;
     transition: all 0.3s ease;
