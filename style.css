@@ -159,8 +159,8 @@ header {
 ========================================= */
 .btn-primary {
     display: inline-block;
-    background-color: #dabd9d;
-    color: rgb(73, 39, 5);
+    background-color: rgb(73, 39, 5);;
+    color: white;
     padding: 12px 30px;
     font-size: 14px;
     font-weight: 600;
@@ -182,7 +182,7 @@ header {
 
 .btn-white {
     display: inline-block;
-    background-color: rgb(101, 54, 7);
+    background-color: rgb(73, 39, 5);;
     color: white;
     padding: 14px 28px;
     font-size: 14px;
