@@ -165,21 +165,94 @@ header {
     accent-color: var(--primary-color); 
 }
 
-/* Grid de Tamanhos */
-.size-grid {
+/* =========================================
+   FILTROS NOVOS (CORES E PREÇO)
+========================================= */
+/* Grade de Cores */
+.color-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
 }
 
-.size-box {
-    border: 1px solid var(--border-color);
-    padding: 8px 0;
-    text-align: center;
-    font-size: 13px;
+.color-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--text-main);
     cursor: pointer;
-    background: var(--white);
-    transition: all 0.2s ease;
+    transition: opacity 0.2s;
+}
+
+.color-item:hover, .color-item.active {
+    font-weight: bold;
+}
+
+.color-swatch {
+    width: 18px;
+    height: 18px;
+    display: block;
+    border-radius: 2px;
+}
+
+/* Slider de Preço Duplo */
+.price-slider-container {
+    position: relative;
+    width: 100%;
+    height: 4px;
+    background-color: #dcd7ce;
+    margin: 25px 0 15px;
+}
+
+.slider-track {
+    position: absolute;
+    height: 100%;
+    background-color: var(--text-main);
+    z-index: 1;
+    left: 0;
+    right: 0;
+}
+
+.range-input {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background: none;
+    pointer-events: none;
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+    z-index: 2;
+    top: 0;
+}
+
+/* O quadrado branco com borda escura do vídeo */
+.range-input::-webkit-slider-thumb {
+    height: 20px;
+    width: 20px;
+    background: #ffffff;
+    border: 2px solid var(--text-main);
+    pointer-events: auto;
+    -webkit-appearance: none;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: background 0.2s;
+}
+
+/* Fica escuro quando clicado/hover, igual ao vídeo */
+.range-input::-webkit-slider-thumb:hover,
+.range-input::-webkit-slider-thumb:active {
+    background: var(--text-main);
+}
+
+.price-values {
+    font-size: 14px;
+    color: var(--text-light);
+    display: flex;
+    justify-content: flex-start;
+    gap: 5px;
+    margin-top: 15px;
 }
 
 /* Efeito premium ao passar o mouse ou selecionar tamanho */
@@ -404,6 +477,27 @@ header {
 .sidebar-close:hover { color: var(--primary-color); }
 .sidebar-content { padding: 30px; overflow-y: auto; flex: 1; color: #333333; font-size: 14px; line-height: 1.6; }
 .sidebar-content h4 { margin-top: 20px; margin-bottom: 10px; color: #1a1a1a; }
+
+/* =========================================
+   RECOLHER/EXPANDIR FILTROS
+========================================= */
+.filter-toggle {
+    cursor: pointer;
+    user-select: none; /* Evita que o texto fique azul ao clicar rápido */
+}
+
+.filter-toggle i {
+    transition: transform 0.3s ease; /* Animação suave da seta girando */
+}
+
+/* Quando o JS adicionar a classe 'collapsed' no grupo */
+.filter-group.collapsed .filter-toggle i {
+    transform: rotate(180deg); /* Vira a seta para baixo */
+}
+
+.filter-group.collapsed .filter-content {
+    display: none; /* Esconde todo o conteúdo (cores ou barra de preço) */
+}
 
 /* =========================================
    RESPONSIVIDADE (MEDIA QUERIES)

@@ -1,0 +1,442 @@
+/* =========================================
+   VARIÁVEIS GLOBAIS (Paleta Belutti)
+========================================= */
+:root {
+    --primary-color: rgb(101, 54, 7); /* Marrom escuro da marca */
+    --main-bg: #f4f1eb; /* Off-white de fundo */
+    --alt-bg: #e8e2d5; 
+    --text-main: #333333; 
+    --text-light: #666666; 
+    --border-color: #dcd7ce; 
+    --white: #ffffff; 
+    --font-main: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* =========================================
+   RESETS E CONFIGURAÇÕES GLOBAIS
+========================================= */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: var(--font-main); color: var(--text-main); background-color: var(--main-bg); }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+/* =========================================
+   CABEÇALHO (HEADER) FIXO
+========================================= */
+header {
+    position: sticky;
+    top: 0; 
+    z-index: 1000; 
+    background-color: burlywood;
+    padding: 20px 40px;
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); 
+}
+
+.header-main {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.logo {
+    font-size: 35px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: var(--text-main);
+}
+
+.nav-menu ul {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-menu a {
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: color 0.2s ease;
+}
+
+.nav-menu a:hover {
+    color: #ffffff;
+}
+
+.search-bar {
+    display: flex;
+    width: 500px;
+    height: 50px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: #ffffff; 
+}
+
+.search-bar input {
+    font-size: 14px;
+    flex: 1;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    background-color: #f5f5f5;
+    border: none;
+    border-left: 1px solid var(--border-color);
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.search-bar button:hover { background-color: #e0e0e0; }
+
+.header-actions {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.action-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.action-item i { font-size: 20px; }
+
+/* =========================================
+   LAYOUT DA PÁGINA DE PRODUTOS (PLP)
+========================================= */
+.container {
+    display: flex;
+    padding: 40px;
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* =========================================
+   BARRA LATERAL (FILTROS)
+========================================= */
+.sidebar {
+    width: 250px;
+    flex-shrink: 0;
+}
+
+.filter-group {
+    margin-bottom: 30px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 20px;
+}
+
+.filter-group h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.filter-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: var(--text-light);
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.filter-item:hover {
+    color: var(--primary-color);
+}
+
+/* Substitui a cor azul padrão do navegador pela cor da marca */
+.filter-item input[type="checkbox"] {
+    margin-right: 10px;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    accent-color: var(--primary-color); 
+}
+
+/* Grid de Tamanhos */
+.size-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.size-box {
+    border: 1px solid var(--border-color);
+    padding: 8px 0;
+    text-align: center;
+    font-size: 13px;
+    cursor: pointer;
+    background: var(--white);
+    transition: all 0.2s ease;
+}
+
+/* Efeito premium ao passar o mouse ou selecionar tamanho */
+.size-box:hover { 
+    border-color: var(--primary-color);
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+/* =========================================
+   ÁREA PRINCIPAL DE PRODUTOS
+========================================= */
+.main-content {
+    flex-grow: 1;
+}
+
+.plp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    font-size: 14px;
+    color: var(--text-light);
+}
+
+.plp-header select {
+    padding: 8px 15px;
+    border: 1px solid var(--border-color);
+    background: transparent;
+    font-family: inherit;
+    cursor: pointer;
+    outline: none;
+}
+
+.plp-header select:focus {
+    border-color: var(--primary-color);
+}
+
+/* GRID DE PRODUTOS */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--white);
+    padding-bottom: 15px;
+    border: 1px solid transparent;
+    transition: border 0.3s;
+}
+
+.product-card:hover {
+    border: 1px solid var(--border-color);
+}
+
+.product-image {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    background-color: var(--alt-bg);
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+/* Tag de desconto atualizada para a paleta escura */
+.discount-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 6px 0;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.product-info {
+    padding: 0 15px;
+}
+
+.product-info h3 {
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 5px;
+    color: var(--text-main);
+}
+
+.stars {
+    color: #f39c12;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.price-current {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.installment {
+    font-size: 12px;
+    color: var(--text-light);
+    margin-top: 3px;
+}
+
+/* Botão de curtir (coração) */
+.btn-wishlist {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: var(--white);
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s;
+    z-index: 2;
+}
+
+.btn-wishlist:hover {
+    color: var(--primary-color);
+}
+
+/* =========================================
+   RODAPÉ (FOOTER)
+========================================= */
+.site-footer {
+    background-color: #333333;
+    color: #e0e0e0;
+    padding: 60px 40px 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto 50px;
+}
+
+.footer-col h2 {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.footer-col h3 {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-col p { font-size: 14px; line-height: 1.6; margin-bottom: 15px; color: #a3a3a3; }
+.social-icons a { color: #ffffff; font-size: 22px; transition: color 0.3s; }
+.social-icons a:hover { color: var(--primary-color); }
+.links-col ul { padding: 0; margin: 0; }
+.links-col li { margin-bottom: 12px; }
+.links-col a { color: #a3a3a3; font-size: 14px; transition: color 0.2s; }
+.links-col a:hover { color: #ffffff; }
+
+.newsletter-form { display: flex; margin-top: 15px; }
+.newsletter-form input {
+    flex: 1; padding: 10px 15px; background-color: transparent; border: 1px solid #666; color: #fff; outline: none;
+}
+.newsletter-form button {
+    padding: 10px 20px; background-color: transparent; border: 1px solid #666; border-left: none; color: #fff; cursor: pointer; transition: background-color 0.2s;
+}
+.newsletter-form button:hover { background-color: #555; }
+
+.payment-icons { display: flex; gap: 15px; font-size: 30px; color: #ffffff; }
+.security-badge { display: flex; align-items: center; gap: 10px; font-size: 14px; color: #4caf50; }
+
+.footer-bottom {
+    max-width: 1400px; margin: 0 auto; padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 12px; color: #a3a3a3; text-align: center;
+}
+
+/* =========================================
+   PAINEL LATERAL (OFFCANVAS)
+========================================= */
+.sidebar-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); z-index: 1001; opacity: 0; visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.sidebar-overlay.active { opacity: 1; visibility: visible; }
+
+.sidebar-panel {
+    position: fixed; top: 0; right: -450px; width: 100%; max-width: 450px; height: 100vh;
+    background-color: #ffffff; z-index: 1002; box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    display: flex; flex-direction: column; transition: right 0.4s cubic-bezier(0.77, 0, 0.175, 1); 
+}
+.sidebar-panel.active { right: 0; }
+
+.sidebar-header { display: flex; justify-content: space-between; align-items: center; padding: 25px 30px; border-bottom: 1px solid #eeeeee; }
+.sidebar-header h3 { margin: 0; font-size: 16px; color: #1a1a1a; text-transform: uppercase; letter-spacing: 1px; }
+.sidebar-close { background: none; border: none; font-size: 28px; line-height: 1; color: #1a1a1a; cursor: pointer; transition: color 0.2s; }
+.sidebar-close:hover { color: var(--primary-color); }
+.sidebar-content { padding: 30px; overflow-y: auto; flex: 1; color: #333333; font-size: 14px; line-height: 1.6; }
+.sidebar-content h4 { margin-top: 20px; margin-bottom: 10px; color: #1a1a1a; }
+
+/* =========================================
+   RESPONSIVIDADE (MEDIA QUERIES)
+========================================= */
+@media (max-width: 1024px) {
+    .product-grid { grid-template-columns: repeat(2, 1fr); }
+    .search-bar { width: 300px; }
+}
+
+@media (max-width: 768px) {
+    /* Ajustes do Cabeçalho para Mobile */
+    header { padding: 15px 20px; }
+    .header-main { flex-wrap: wrap; gap: 15px; }
+    .logo { font-size: 28px; }
+    .action-item div { display: none; }
+    .search-bar { order: 3; width: 100%; height: 45px; }
+    .nav-menu { order: 4; width: 100%; overflow-x: auto; padding-bottom: 5px; }
+    .nav-menu ul { justify-content: flex-start; min-width: max-content; gap: 20px; }
+    .nav-menu a { font-size: 13px; }
+
+    /* Ajustes da Página de Produtos para Mobile */
+    .container { flex-direction: column; padding: 20px; }
+    .sidebar { width: 100%; }
+    .plp-header { flex-direction: column; align-items: flex-start; gap: 15px; }
+    .product-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .product-image { height: 250px; }
+    .discount-bar { font-size: 12px; padding: 4px 0; }
+
+    /* Ajustes do Rodapé para Mobile */
+    .footer-content { grid-template-columns: 1fr; gap: 35px; text-align: center; }
+    .newsletter-form { flex-direction: column; gap: 10px; }
+    .newsletter-form input { border-right: 1px solid #666; }
+    .newsletter-form button { border: 1px solid #666; width: 100%; }
+    .payment-icons, .security-badge, .social-icons { justify-content: center; }
+    .sidebar-panel { max-width: 85%; }
+}
